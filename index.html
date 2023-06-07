@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>显示 AppStore 内容</title>
+    <title>AppStore</title>
 </head>
 <body>
     <div id="appstore-content"></div>
 
     <script>
-        // 给定的 JSON 内容
-        var jsonContent = `{"name":"请加新源-https://ipa.jweiy.cn/appstore","message":"软件园已迁移 请加新源\r\nhttps://ipa.jweiy.cn/appstore","identifier":"请加新源-https://ipa.jweiy.cn/appstore","sourceURL":"http://dump.jweiy.cn/appstore","sourceicon":"https://app.admin.com/uploads/20200920/110fa335493e1bb6d157a954952c0a69.png","payURL":"https://t.me/JwipaS","unlockURL":"http://dump.jweiy.cn/appstore","apps":[{"name":"通知","type":0,"version":"1.0","versionDate":"2023-06-03T03:51:02+08:00","versionDescription":"软件园已迁移 请加新源\nhttps://ipa.jweiy.cn/appstore","lock":"0","downloadURL":"1","isLanZouCloud":"0","iconURL":"https://dump.jweiy.cn/uploads/20230603/cb6d6c8cf6639e3295ad7aa32475a6c1.jpeg","tintColor":"","size":"1048576"}]}`;
+        var appstoreData = {
+            "name": "请加新源-https://ipa.jweiy.cn/appstore",
+            "message": "软件园已迁移 请加新源\r\nhttps://ipa.jweiy.cn/appstore",
+            "identifier": "请加新源-https://ipa.jweiy.cn/appstore",
+            "sourceURL": "http://dump.jweiy.cn/appstore",
+            "sourceicon": "https://app.admin.com/uploads/20200920/110fa335493e1bb6d157a954952c0a69.png",
+            "payURL": "https://t.me/JwipaS",
+            "unlockURL": "http://dump.jweiy.cn/appstore",
+            "apps": [
+                {
+                    "name": "通知",
+                    "type": 0,
+                    "version": "1.0",
+                    "versionDate": "2023-06-03T03:51:02+08:00",
+                    "versionDescription": "软件园已迁移 请加新源\nhttps://ipa.jweiy.cn/appstore",
+                    "lock": "0",
+                    "downloadURL": "1",
+                    "isLanZouCloud": "0",
+                    "iconURL": "https://dump.jweiy.cn/uploads/20230603/cb6d6c8cf6639e3295ad7aa32475a6c1.jpeg",
+                    "tintColor": "",
+                    "size": "1048576"
+                }
+            ]
+        };
 
-        // 将 JSON 字符串解析为 JavaScript 对象
-        var appstoreData = JSON.parse(jsonContent);
-
-        // 在页面上显示 AppStore 内容
         var appstoreDiv = document.getElementById('appstore-content');
 
-        // 添加名称
         var nameElement = document.createElement('h2');
         nameElement.textContent = appstoreData.name;
         appstoreDiv.appendChild(nameElement);
 
-        // 添加消息
         var messageElement = document.createElement('p');
         messageElement.textContent = appstoreData.message;
         appstoreDiv.appendChild(messageElement);
 
-        // 添加应用列表
         var appsListElement = document.createElement('ul');
-        appstoreData.apps.forEach(function(app) {
+        appstoreData.apps.forEach(function (app) {
             var appElement = document.createElement('li');
             appElement.textContent = app.name;
             appsListElement.appendChild(appElement);
