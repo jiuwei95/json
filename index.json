@@ -1,0 +1,24 @@
+{
+  "name": "请加新源-https://ipa.jweiy.cn/appstore",
+  "message": "软件园已迁移 请加新源\r\nhttps://ipa.jweiy.cn/appstore",
+  "identifier": "请加新源-https://ipa.jweiy.cn/appstore",
+  "sourceURL": "http://dump.jweiy.cn/appstore",
+  "sourceicon": "https://app.admin.com/uploads/20200920/110fa335493e1bb6d157a954952c0a69.png",
+  "payURL": "https://t.me/JwipaS",
+  "unlockURL": "http://dump.jweiy.cn/appstore",
+  "apps": [
+    {
+      "name": "通知",
+      "type": 0,
+      "version": "1.0",
+      "versionDate": "2023-06-03T03:51:02+08:00",
+      "versionDescription": "软件园已迁移 请加新源\nhttps://ipa.jweiy.cn/appstore",
+      "lock": "0",
+      "downloadURL": "1",
+      "isLanZouCloud": "0",
+      "iconURL": "https://dump.jweiy.cn/uploads/20230603/cb6d6c8cf6639e3295ad7aa32475a6c1.jpeg",
+      "tintColor": "",
+      "size": "1048576"
+    }
+  ]
+}
