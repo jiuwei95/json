@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/appstore", "destination": "/index.json" },
-    { "source": "/(.*)", "destination": "/index.json" }
-  ]
-}
